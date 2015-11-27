@@ -1,0 +1,56 @@
+{
+	"name": "yiisoft/yii2-app-advanced",
+	"description": "Yii 2 Advanced Application Template",
+	"keywords": ["yii2", "framework", "advanced", "application template"],
+	"homepage": "http://www.yiiframework.com/",
+	"type": "project",
+	"license": "BSD-3-Clause",
+	"support": {
+		"issues": "https://github.com/yiisoft/yii2/issues?state=open",
+		"forum": "http://www.yiiframework.com/forum/",
+		"wiki": "http://www.yiiframework.com/wiki/",
+		"irc": "irc://irc.freenode.net/yii",
+		"source": "https://github.com/yiisoft/yii2"
+	},
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=5.4.0",
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-bootstrap": "*",
+		"yiisoft/yii2-swiftmailer": "*",
+		"vova07/yii2-imperavi-widget": "*",
+		"2amigos/yii2-selectize-widget": "~1.0",
+		"kartik-v/yii2-datecontrol": "dev-master",
+		"kartik-v/yii2-widget-datetimepicker": "*",
+		"kartik-v/yii2-widget-fileinput": "*",
+		"yiisoft/yii2-imagine": "*",
+		"kartik-v/yii2-widget-select2": "*",
+                "nickcv/yii2-mandrill": "*",
+		"dektrium/yii2-user": "0.9.4@dev",
+		"aws/aws-sdk-php": "^3.2",
+                "2amigos/yii2-file-upload-widget": "~1.0"
+	},
+  "repositories": [
+		{
+		"type":"git",
+		"url":"https://github.com/Ziggeo/ZiggeoPhpSdk.git"
+		}
+	],
+	"require-dev": {
+		"yiisoft/yii2-codeception": "*",
+		"yiisoft/yii2-debug": "*",
+		"yiisoft/yii2-gii": "*",
+		"yiisoft/yii2-faker": "*",
+		"ziggeo/ziggeophpsdk": "dev-master",
+		"ext-xsl": "*"
+	},
+	"config": {
+		"process-timeout": 1800
+	},
+	"extra": {
+		"asset-installer-paths": {
+			"npm-asset-library": "vendor/npm",
+			"bower-asset-library": "vendor/bower"
+		}
+	}
+}

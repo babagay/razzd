@@ -1,0 +1,22 @@
+php_value upload_max_filesize 40M
+
+# prevent directory listings
+#Options -Indexes
+#IndexIgnore */*
+
+
+# follow symbolic links
+#Options FollowSymlinks
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^www\.(.+) [NC]
+RewriteRule .* http://%1/$0 [L,R=301]
+
+RewriteBase /
+RewriteCond %{REQUEST_URI} /$ [NC]
+RewriteRule ^(.*)(/)$ $1 [L,R=301]
+
+RewriteRule ^admin(/.+)?$ /backend/web/$1 [L,PT]
+RewriteRule ^(admin)/$ /$1 [L,R=301]
+RewriteRule ^(.+)?$ /frontend/web/$1
+

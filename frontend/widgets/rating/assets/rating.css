@@ -1,0 +1,22 @@
+.br-widget {
+    height: 25px;
+}
+
+ .br-widget a.br-active, .br-widget a.br-selected {
+    background-color: #59a6d6;
+}
+ .br-widget a {
+    background-color: #e3e3e3;
+    display: block;
+    float: left;
+    height: 16px;
+    margin: 1px;
+    width: 70px;
+}
+
+.br-widget .br-current-rating {
+    color: #646464;
+    float: left;
+    line-height: 1.1;
+    padding: 0 20px;
+}

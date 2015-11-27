@@ -1,0 +1,25 @@
+# cat ffmpegWrapper
+#!/bin/bash
+# ffmpegWrapper
+operation="$1"
+File1="$2"
+File2="$3"
+File3="$4"
+
+
+if [[ $operation = "merge" ]]
+    # $audFile = $File1
+    # $vidFile = $File2
+    # $outputFile = $File3
+	then
+	   ffmpeg -i "$File1" -i "$File2" -c:v libx264 -b:v 512K -ar 24000  -ac 1 -ab 24k "$File3" -threads auto -y
+	   echo ffmpeg -i "$File1" -i "$File2" -c:v libx264 -b:v 512K -ar 24000  -ac 1 -ab 24k "$File3" -threads auto -y > /var/www/frontend/web/files/tmp/888
+
+elif [[ $operation = "convert_mp4" ]]
+    # Convert to mp4 format
+    # $vidFile = $File1
+    # $outputFile = $File2
+	then
+	    ffmpeg -i "$File1" -c:v libx264 -b:v 512K -ar 24000  -ac 1 -ab 24k "$File2" -threads auto -y
+fi
+
